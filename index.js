@@ -25,7 +25,8 @@
 
 var SomeModule = require('./output/SomeModule');
 
-SomeModule.myFunction('adsfsdfasdf')() // second function call to run the eff thunk
+// second function call to run the eff thunk
+SomeModule.myFunction('adsfsdfasdf')()
 
 // > node .
 // i got: adsfsdfasdf
