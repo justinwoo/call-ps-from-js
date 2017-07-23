@@ -1,9 +1,10 @@
 module SomeModule where
 
 import Prelude
-import Control.Monad.Eff (Eff)
-import Control.Monad.Eff.Console (CONSOLE, log)
 
-myFunction :: forall e. String -> Eff (console :: CONSOLE | e) Unit
-myFunction x = do
+import Control.Monad.Eff.Console (log)
+import Control.Monad.Eff.Unsafe (unsafePerformEff)
+
+myFunction :: forall e. String -> Unit
+myFunction x = unsafePerformEff do
   log $ "i got: " <> x
